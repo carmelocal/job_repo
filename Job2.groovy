@@ -1,6 +1,6 @@
 def gitUrl = 'https://github.com/carmelocal/test_repo.git'
 
-job('Job1') {
+job('Job2') {
     scm {
         git(gitUrl)
     }
