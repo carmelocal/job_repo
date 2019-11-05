@@ -1,3 +1,5 @@
+package hudson.plugins.git;
+
 import hudson.plugins.git.*;
 import jenkins.model.*;
 
