@@ -2,7 +2,10 @@ pipelineJob('Job2') {
   definition {
     cpsScm {
       scm {
-        git('https://github.com/carmelocal/test_repo.git', 'master')
+        branch('master')
+        remote{
+          url('https://github.com/carmelocal/test_repo.git')
+        }
       }
       scriptPath("JenkinsFile")
     }
