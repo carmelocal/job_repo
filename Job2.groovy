@@ -9,7 +9,7 @@ pipelineJob('Job2') {
             }
           }
       }
-      scriptPath("JenkinsFile")
+      scriptPath("Jenkinsfile")
     }
   }
   triggers{
