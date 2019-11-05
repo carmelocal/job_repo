@@ -1,25 +1,13 @@
-// MyProject-Build.groovy
+def gitUrl = 'https://github.com/carmelocal/test_repo.git'
 
-def gitUrl = "https://github.com/carmelocal/test_repo.git"
-
-job("MyProject-Build") {
-    description "Builds MyProject from master branch."
-    parameters {
-        stringParam('COMMIT', 'HEAD', 'Commit to build')
-    }
+job('test-job') {
     scm {
-        git {
-            remote {
-                url gitUrl.
-                branch "origin/master"
-            }
-            extensions {
-                wipeOutWorkspace()
-                localBranch master
-            }
-        }
+        git(gitUrl)
+    }
+    triggers {
+        scm('*/15 * * * *')
     }
     steps {
-        shell "Look: I'm building master!"
+        
     }
 }
