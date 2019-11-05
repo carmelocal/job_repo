@@ -1,4 +1,5 @@
 import hudson.plugins.git.*;
+import jenkins.model.*;
 
 def scm = new GitSCM("https://github.com/carmelocal/test_repo.git")
 scm.branches = [new BranchSpec("*/master")];
