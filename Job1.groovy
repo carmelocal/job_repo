@@ -1,6 +1,6 @@
 // MyProject-Build.groovy
 
-def gitUrl = "https://github.com/example/project.git"
+def gitUrl = "https://github.com/carmelocal/test_repo.git"
 
 job("MyProject-Build") {
     description "Builds MyProject from master branch."
