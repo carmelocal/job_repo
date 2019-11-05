@@ -15,3 +15,4 @@ pipelineJob('Job1') {
   triggers{
     scm('*/2 * * * *')
   }
+}
