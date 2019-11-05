@@ -1,11 +1,11 @@
-def gitUrl = 'git://github.com/test/test'
+def gitUrl = 'https://github.com/carmelocal/test_repo.git'
 
-job('test-job') {
+job('Job1') {
     scm {
         git(gitUrl)
     }
     triggers {
-        scm('*/15 * * * *')
+        scm('*/2 * * * *')
     }
     steps {
         
