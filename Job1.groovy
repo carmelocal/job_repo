@@ -6,7 +6,7 @@ import hudson.plugins.git.*;
           def flowDefinition = new org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition(scm, "Jenkinsfile")
 
           def parent = Jenkins.instance
-          def job = new org.jenkinsci.plugins.workflow.job.WorkflowJob(parent, "New Job")
+          def job = new org.jenkinsci.plugins.workflow.job.WorkflowJob(parent, "Job1")
 
           job.definition = flowDefinition                                                                                                                                                                                def spec = "*/2 * * * *";
           hudson.triggers.SCMTrigger newCron = new hudson.triggers.SCMTrigger(spec);
