@@ -1,13 +1,13 @@
-def gitUrl = 'https://github.com/carmelocal/test_repo.git'
-
-job('Job2') {
-    scm {
-        git(gitUrl)
-    }
-    triggers {
+pipelineJob('example') {
+  definition {
+    cpsScm {
+      scm {
+        git('https://github.com/carmelocal/test_repo.git')
+      }
+      triggers {
         scm('*/2 * * * *')
+      }
+      scriptPath("JenkinsFile")
     }
-    steps {
-        
-    }
+  }
 }
