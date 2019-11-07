@@ -13,6 +13,6 @@ pipelineJob('Job1') {
     }
   }
   triggers{
-    scm('*/2 * * * *')
+    scm('H/2 * * * *')
   }
 }
